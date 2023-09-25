@@ -6,6 +6,6 @@ set(CMAKE_CXX_STANDARD 23)
 find_package(MPI REQUIRED)
 message(STATUS "Run: ${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} ${MPIEXEC_MAX_NUMPROCS} ${MPIEXEC_PREFLAGS} EXECUTABLE ${MPIEXEC_POSTFLAGS} ARGS")
 
-add_executable(openmpi avg.cpp)
+add_executable(openmpi prank.cpp)
 
 target_link_libraries(openmpi PRIVATE MPI::MPI_CXX)
